@@ -1,0 +1,5 @@
+.idea
+lib*
+*pycache*
+
+__pycache__*
