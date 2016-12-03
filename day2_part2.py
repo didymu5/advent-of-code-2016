@@ -10,16 +10,12 @@ def move_coord(in_x, in_y, x_move, y_move):
     out_x = in_x + x_move
     out_y = in_y + y_move
     if out_x < 0 or out_y < 0:
-        print('less than 0')
         return (in_x, in_y)
     elif out_x > 4 or out_y > 4:
-        print('too big')
         return (in_x, in_y)
     elif grid[out_y][out_x]==None:
-        print('nonetype problem')
         return (in_x, in_y)
     else:
-        print('actually worked')
         return (out_x, out_y)
 
 def find_number(cur_x, cur_y, line_dir):
@@ -39,7 +35,7 @@ def find_number(cur_x, cur_y, line_dir):
                     out_x = new_coord[0]
                     out_y = new_coord[1]
                 else:
-                    new_coord = move_coord(out_x, out_y, 0, 11)
+                    new_coord = move_coord(out_x, out_y, 0, 1)
                     out_x = new_coord[0]
                     out_y = new_coord[1]
         return (out_x, out_y)
